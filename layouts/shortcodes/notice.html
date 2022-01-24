@@ -3,6 +3,12 @@
 
 {{- if not ($.Page.Scratch.Get "noticecount") }}
 <style>
+    .notice {
+        border-radius: 20px 20px 10px 10px;
+        background-color: hsl(0, 0%, 80%);
+        color: #3f3f3f;
+        padding: 12px 20px;
+    }
     .notice-title {
         border-radius: 10px 10px 0px 0px;
         font-weight: 700;
@@ -12,19 +18,16 @@
         margin: -12px -20px 0 -20px;
         padding: 3px 0 3px 20px;
     }
-    .notice {
-        border-radius: 20px 20px 10px 10px;
-        background-color: hsl(0, 0%, 80%);
-        color: #3f3f3f;
-        padding: 12px 20px;
+    .notice-body {
+        margin-top: 12px;
     }
-    .notice p:not(:first-child) {
+    .notice-body p {
         margin-top: 12px;
         margin-bottom: 12px;
     }
-    .notice p:last-child {
+    .notice-body p:last-child {
         margin-top: 12px;
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 
     .notice-icon {
@@ -83,6 +86,8 @@
         </span>
         {{- i18n $type -}}
     </p>
+    <div class="notice-body">
     {{ $inner }}
+    </div>
 </div>
 {{- $.Page.Scratch.Add "noticecount" 1 -}}
