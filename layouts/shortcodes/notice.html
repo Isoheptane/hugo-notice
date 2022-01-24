@@ -18,6 +18,10 @@
         color: #3f3f3f;
         padding: 12px 20px;
     }
+    .notice p:not(:first-child) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
     .notice p:last-child {
         margin-top: 12px;
         margin-bottom: 0;
@@ -79,8 +83,6 @@
         </span>
         {{- i18n $type -}}
     </p>
-    <p>
-        {{ $inner }}
-    </p>
+    {{ $inner }}
 </div>
 {{- $.Page.Scratch.Add "noticecount" 1 -}}
