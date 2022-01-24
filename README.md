@@ -3,7 +3,6 @@ This is a simple theme component which provided a shortcode: `notice` to show no
 
 There are three types of notices: `tip`, `note`, `warning`. You can also add more types of notices if you want. Just modify the source file `layouts/shortcodes/notice.html` and the localization file `i18n/language.yaml`.
 
-## Usage
 ### Installation
 You can just simply clone this project to your theme folder:
 ```shell
@@ -18,14 +17,14 @@ Example with `config.yaml`:
 ```yaml
 theme: ["hugo-notice", "others"]
 ```
-### Use in your site
-Use shortcode like this:
+### Usage
+Use notice shortcode like this:
 ```go
 {{< notice warning >}}
 This is a warning message.
 {{< /notice >}}
 ```
-or like this
+or like this:
 ```go
 {{< notice note >}}
 It's worth to notice that: ...
