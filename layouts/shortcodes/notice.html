@@ -1,7 +1,7 @@
-{{- $type := .Get 0 -}}
-{{- $inner := (markdownify .Inner) -}}
+{{ $type := .Get 0 }}
+{{ $inner := (markdownify .Inner) }}
 
-{{- if not ($.Page.Scratch.Get "noticecount") }}
+{{ if not ($.Page.Scratch.Get "noticecount") }}
 <style>
     .notice {
         border-radius: 20px 20px 10px 10px;
@@ -76,7 +76,7 @@
     </symbol>
     <!-- Add your own notice icon below -->
 </svg>
-{{- end -}}
+{{ end }}
 <div class="notice {{ $type }}">
     <p class="notice-title {{ $type }}">
         <span class="notice-icon">
@@ -84,10 +84,10 @@
                 <use href="#notice-icon-{{ $type }}" fill="white"></use>
             </svg>
         </span>
-        {{- i18n $type -}}
+        {{ i18n $type }}
     </p>
     <div class="notice-body">
     {{ $inner }}
     </div>
 </div>
-{{- $.Page.Scratch.Add "noticecount" 1 -}}
+{{ $.Page.Scratch.Add "noticecount" 1 }}
