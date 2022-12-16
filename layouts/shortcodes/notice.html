@@ -3,10 +3,13 @@
 
 {{ if not ($.Page.Scratch.Get "noticecount") }}
 <style>
+    :root {
+        --text-color: #3f3f3f;
+    }
     .notice {
         border-radius: 20px 20px 10px 10px;
         background-color: hsl(0, 0%, 80%);
-        color: #3f3f3f;
+        color: var(--text-color);
         padding: 12px 20px;
     }
     .notice-title {
@@ -24,6 +27,9 @@
     .notice-body p {
         margin-top: 12px;
         margin-bottom: 12px;
+    }
+    .notice-body code {
+        color: var(--text-color)
     }
     .notice-body p:last-child {
         margin-top: 12px;
