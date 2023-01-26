@@ -3,8 +3,11 @@
 
 {{ if not ($.Page.Scratch.Get "noticecount") }}
 <style>
+    
     :root {
         --text-color: #3f3f3f;
+        --link-color: #428d61;
+        --link-hover-color: #57cc8a;
     }
     .notice {
         border-radius: 20px 20px 10px 10px;
@@ -35,17 +38,21 @@
         margin-top: 12px;
         margin-bottom: 0px;
     }
-
     .notice-icon {
         display: inline-flex;
         padding-right: 0.375em;
     }
-
     .notice-icon svg {
         position: relative;
         top: 0.1em;
         width: 1em;
         height: 1em;
+    }
+    .notice a {
+        color: var(--link-color);
+    }
+    .notice a:hover {
+        color: var(--link-hover-color);
     }
     /* Tip */
     .notice-title.tip {
