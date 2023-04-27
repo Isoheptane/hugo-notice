@@ -30,3 +30,6 @@ or like this:
 It's worth to notice that: ...
 {{< /notice >}}
 ```
+
+### Credits
+This project is inspired by [`martignoni/hugo-notice`](https://github.com/martignoni/hugo-notice), a similar hugo notice module.
